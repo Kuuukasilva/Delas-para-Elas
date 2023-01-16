@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+:root{
+    --lilas:  #EFD3EA;
+    --lilas1: #D8A8D4;
+    --lilas2: #C58EC8;
+    --lilas3: #B16FB4;
+    --lilas4: #AA65AD;
+    --lilas5: #834D85;
+    --lilas6: #E09FFF;
+    --lilas7: #541b56;
+    --lilas8: #c6a2c7;
+
+    --white:  #ffffff;
+    --white1: #e7e7e7;
+
+    --cinza:  #d3d3d3;
+    --black:  #000000;
+    --azul:   #3B579D;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(72deg, var(--white1) 10%, var(--lilas2) 90%);
+}
+
+
+/*----------------------------------NAVBAR----------------------------------*/
+
+
+
+
+.login a{
+  border: 2px solid var(--white);
+  border-radius: 50px;
+}
+
+.logo-img img{
+  width: 300px;
+  padding: 20px;
+}
+
+.cadastro a{
+  color: var(--white);
+  width: 90px ;
+  height: 17px;
+  border: 2px solid var(--white);
+  margin: 5px;
+  border-radius: 5px;
+}
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: var(--lilas5);
+    height: 12vh;
+  }
+
+.navbar{
+  z-index: 10;
+}
+  
+.navbar .logo {
+  margin-left: 0px;
+}
+
+.navbar .logo img {
+  width: 270px;
+}
+
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 1px;
+    margin-left: 30px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--white);
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      margin-top: 29px;
+      z-index: 99;
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: var(--lilas5);
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+      margin-top:20px ;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+
+  /*----------------------------------perfil-user----------------------------------*/
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: var(--white);
+    padding: 0px 0px 0px 0px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: var(--white);
+    padding: 0px 0px 0px 0px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--lilas1);
+  }
+  
+  .dropdown-content {
+    width: 190px;
+    padding: 0;
+    display: none;
+    position: absolute;
+    background-color: var(--lilas);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+    z-index: 2;
+    margin: 0px 80px 100px 0;
+    border-radius: 25px;
+    right:5px ;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .dropdown-content {
+      width: 190px;
+      padding: 0;
+      display: none;
+      position: absolute;
+      background-color: var(--lilas);
+      min-width: 180px;
+      box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+      z-index: 2;
+      margin: 0px 80px 100px 100px;
+      border-radius: 25px;
+      right:5px ;
+    }
+  }
+  .dropdown-content a {
+    margin: 10px 0px 30px 10px;
+    float: none;
+    color: var(--black);
+    padding: 5px 5px;
+    text-decoration: none;
+    display: inline;
+    text-align: right;
+    text-align: justify;
+
+
+    font-size: 14px;
+    line-height: 1.3em;
+    white-space: normal;
+    vertical-align: middle;
+    padding-right: 15px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--lilas1);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /*----------------------------------imagen-avatar----------------------------------*/
+
+  
+  .container-avatar {
+    text-align: center;
+    width: 180px;
+    margin: 25px 0px 25px 0px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .dropdown-content {
+      text-align: center;
+      width: 180px;
+      margin: 25px -50px 25px 10px;
+    }
+  }
+  
+  img.avatar {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    padding: 4px;
+    border: var(--lilas4) solid 4px;
+    margin: auto 0 10px 0;
+  }
+
+  /*----------------------------------CARROSEL 1----------------------------------*/
+
+  
+    * {box-sizing: border-box}
+
+  .mySlides{
+    display: 100px;
+  }
+  .img img {
+    vertical-align: middle; 
+    width: 100%; 
+    height: 100%;
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: flex;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: var(--black);
+  }
+  
+  /* Caption text */
+  .text {
+    color: var(--white);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/5) */
+  .numbertext {
+    color: var(--white);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: var(--lilas5);
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+  .boton{
+    text-align:center;
+    right: 35px
+  }
+
+
+
+/*----------------------------------BACK TO TOP----------------------------------*/
+  .botton-top img{
+    width: 30px;
+    padding: 0px;
+  }
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--lilas7);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  
+  #myBtn:hover {
+    background-color: var(--lilas3);
+  }
+  @media screen and (max-width: 600px) {
+    .botton-top #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 5px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: var(--lilas7);
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 20px;
+    }
+  }
+/*----------------------------------COMENTAR----------------------------------*/
+
+
+
+
+#myBtn1 {
+  bottom: 85px;
+  background-color: var(--lilas7); 
+  border: none;
+  z-index: 9;
+  padding: 20px;
+  position: fixed;
+  margin: 4px 2px;
+  cursor: pointer;
+  right: 5px;
+  border-radius: 20px;
+  display: block;
+  border: none;
+  outline: none;
+  padding: 15px;
+}
+
+#myBtn2:hover {
+  background-color: var(--lilas3);
+}
+.botton-mais img{
+  width: 30px;
+  padding: 0px;
+  bottom: 0;
+}
+/*----------------------------------BANNER----------------------------------*/
+
+
+.title-banner h2{
+  text-align: center;
+  color: var(--white);
+  margin: 0px 37%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lilas5); /* hex: 0 - F */
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background: white;
+}
+
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 100%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+  .column img {
+    width: 90%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width:25%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 40%;
+    max-width: 100%;
+  }
+}
+
+/*code-2*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 2px;
+}
+
+.mySlides {
+  display: none;
+}
+
+/*coluna*/
+.column {
+  float: left;
+  width: 25%;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/*magin top*/
+.column img {
+  margin-bottom: -4px;
+}
+
+/*animação*/
+.column img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/*----------------------------------PUBLICATION----------------------------------*/
+
+.title-publication h2{
+  text-align: center;
+  color: var(--white);
+  margin: 0px 37%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lilas5); /* hex: 0 - F */
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+
+/*----------------------------------CARDS----------------------------------*/
+
+.botton-coment button {
+  margin: -5px 5px 0px 0px;
+  border: none;
+  outline: 0;
+  height: 35px;
+  color: var(--white);
+  background-color: var(--lilas7);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  
+}
+
+.botton-coment button:hover {
+  opacity: 0.7;
+}
+
+.card {
+  background: var(--white);
+  box-shadow: 0 4px 8px 0 rgba(39, 36, 36, 0.2);
+  max-width: 600px;
+  margin: 8px auto;
+  text-align: center;   
+}
+
+.publicaton-title h2{
+  text-align:center;
+  font-size: 22px;
+}
+
+.price {
+  color: var(--white);
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: var(--white);
+  background-color: var(--lilas7);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card h1{
+  text-align:center;
+  font-size: 30px;
+}
+.card p{
+  text-align:center;
+  font-size: 16px;
+  text-align: justify;
+  padding: 5px;
+  text-overflow: ellipsis;
+}
+
+.card b{
+  color: var(--lilas7);
+  text-align:center;
+  font-size: 20px;
+}
+
+
+/*responsivo*/
+
+.row-publi {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-publi {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 540px) {
+  .column-publi {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .column-publi {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*
+/*---------------enlarge image--------------- */
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/*----------------------------------RECADOS----------------------------------*/
+
+.title-recado h2{
+  text-align: center;
+  color: var(--white);
+  margin: 0px 37% 50px 37%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lilas5); /* hex: 0 - F */
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .title-recado h2 {
+    -ms-flex: 50%;
+    flex: 40%;
+    max-width: 100%;
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.conteiner-recado{
+  position: relative;
+  max-width: max-content;
+  margin:  5px 5px 5px 5px;
+}
+
+.conteiner-recado img{
+  margin: 0 auto;
+  width:100%;
+}
+
+@media screen and (max-width: 600px) {
+  .conteiner-recado img{
+    width:100%;
+
+  }
+}
+
+
+.conteiner-recado b{
+  font-size: 13.5px;
+}
+
+.content-recado h1{
+  font-size: 25px;
+}
+
+.conteiner-recado img{
+  vertical-align: middle;
+}
+
+.conteiner-recado .content-recado{
+  position: absolute;
+  bottom: 0;
+  background: var(--lilas5);
+  background: rgba(170, 101, 173, 0.5);
+  color: var(--white);
+  width: 100%;
+  padding: 5px;
+}
+
+
+
+/*----------------------------------FOOTER----------------------------------*/
+
+.footer-link{
+  background: var(--lilas4);
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+  height: 200px;
+  width: 100%;
+  display: flex;
+}
+
+.footer-mobile {
+  box-sizing: border-box;
+  display: block;
+}
+
+.footer-link .list-footer li{
+  text-decoration: none;
+  transition: 0.3s; 
+  text-align: justify;
+  display: inline;
+  overflow: hidden;
+}
+
+.list-footer a{
+  color: var(--cinza);
+  text-decoration: none;
+  transition: 0.3s;
+ 
+  display: inline;
+  font-size: 14px;
+  line-height: 1.3em;
+  white-space: normal;
+  vertical-align: middle;
+  margin: 0.75em auto;
+  padding-right: 15px;
+}
+
+.list-footer {
+
+margin: 35px auto 0% auto;  
+font-size: 14px;
+padding: 26 10%;
+
+}
+
+.footer-link {
+  display: inline-flex;
+}
+
+
+

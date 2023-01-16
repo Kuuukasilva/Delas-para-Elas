@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delas para Elas</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico.png">
+</head>
+
+<body>
+    <!---------------------------------BACK TO TOP----------------------------------->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <div class="botton-top">
+          <img src="./img/top-seta1.png" alt="">
+        </div>
+      </button>
+    <script src="back-to-top.js"></script>
+
+    <!---------------------------------COMENTAR----------------------------------->
+
+    <a href="../comentario/comentario.php" target="_blank">
+        <button onclick="redComent()" id="myBtn1" title="Go to top">
+              <div class="botton-mais">
+                <img src="./img/mais.png" alt="">
+              </div>
+          </button>
+    </a>
+
+    <!---------------------------------NAVBAR----------------------------------->
+    <div class="navbar">
+        <header>
+            <nav>
+                <a class="logo-img" href="../home/index.html">
+                    <img src="./img/delas-para-elas.png" alt="">
+                </a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="../sobre-nos/sobrenos.html" target="_blank">Sobre Nós</a></li>
+                    <li><a href="../tipos-violencia/tp-violencia.html" target="_blank">Tipos de Violencia</a></li>
+                    <li><a href="../legislacao/legislacao.html" target="_blank">Legislação</a></li>
+                    <li><a href="../publicacao/publicacao.php" target="_blank">Publicações</a></li>
+                    <li><a href="../home/logout.php" target="_blank">Logout</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Perfil  <i class="fa fa-caret-down"></i>
+                  
+                  
+                  
+                </button>
+
+                            <div class="dropdown-content">
+
+                                <div class="container-avatar">
+
+                                    <img class="avatar" src="./img/user.png" alt="Image do Usuario" />
+
+                                    <a href="../perfil/perfil.php" target="_blank">Perfil</a>
+                                    <a href="#" target="_blank">Config</a>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        </div>
+
+        <script src="mobile-navbar.js"></script>
+
+
+        <!---------------------------------SLIDESHOW----------------------------------->
+        <div class="slideshow-container">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 5</div>
+                <img src="../home/img/Banner Inicial 4.png" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 5</div>
+                <img src="../home/img/Banner-Legislação.png" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 5</div>
+                <img src="../home/img/Banner-Passeata.png" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="../home/img/Banner-Publicação.png" style="width:100%">
+                <div class="text">Caption Four</div>
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 5</div>
+                <img src="../home/img/BannerSegurança.png" style="width:100%">
+                <div class="text">Caption Five</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div class="boton">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <script src="mobile-slideshow.js"></script>
+
+
+        <!---------------------------------BANNER----------------------------------->
+
+        <div class="title-banner">
+            <h2>
+                Banner
+            </h2>
+        </div>
+        <br>
+        <div class="conteiner-banner">
+            <div class="row">
+                <div class="column">
+                    <a href="../sobre-nos/sobrenos.html" target="_blank"><img src="../home/img/sobre-nos.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+                </div>
+                <div class="column">
+                    <a href="../tipos-violencia/tp-violencia.html" target="_blank"><img src="../home/img/Tipos-Violencia.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"></a>
+                </div>
+                <div class="column">
+                    <a href="../publicacao/publicacao.php" target="_blank"><img src="../home/img/Publicações.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"> </a>
+                </div>
+                <div class="column">
+                    <a href="../comentario/comentario.php" target="_blank"><img src="../home/img/solte-voz.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"> </a>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!---------------------------------PUBLICTION----------------------------------->
+
+        <div class="title-publication">
+            <h2>
+                Publicações
+            </h2>
+        </div>
+
+        <br>
+
+
+        <div class="row-publi">
+
+            <div class="column-publi">
+
+                <div class="card">
+                    <img src="./img/Banner Inicial 4.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Mais Um Dia no Trabalho</h1>
+                    <b class="price">maria36</b>
+                    <p>Oioi pessoal do delas!! Acabei de chegar em casa, e a primeira coisa que pensei foi vir pra cá contar sobre o que tá acontecendo. Nos últimos meses, fui contratada por uma nova empresa: ou melhor, o próprio inferno!!...</p>
+                    <a href="../publicacao/publicacao.php" target="_blank"><button>Clique aqui</button></a>
+                </div>
+
+            </div>
+
+            <div class="column-publi">
+
+                <div class="card">
+                    <img src="./img/Banner Inicial 4.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Nós não aguentamos mais!</h1>
+                    <b class="price">Luiza</b>
+                    <p>Nesses dias andei procurando algum lugar na internet onde eu poderia contar o que me aconteceu na semana passada e encontrei o delas para elas, e achei bem interessante e único. Frequentei transportes públicos por...
+                    </p>
+                    <a href="../publicacao/publicacao.php" target="_blank"><button>Clique aqui</button></a>
+                </div>
+
+            </div>
+
+
+            <div class="column-publi">
+                <div class="card">
+                    <img src="./img/Banner Inicial 2.png" alt="Denim Jeans" style="width:100%">
+                    <h1>O Passado de Minha Mãe</h1>
+                    <b class="price">Paula Silva</b>
+                    <p>Bom, venho utilizando bastante o Delas nos últimos dias: é um relato mais impactante do que o outro!! Por isso, pensei em descrever uma antiga história de minha mãe, com o marido anterior daquele que seria meu pai...</p>
+                    <a href="../publicacao/publicacao.php " target="_blank"><button>Clique aqui</button></a>
+                </div>
+
+            </div>
+
+            <div class="column-publi">
+
+                <div class="card">
+                    <img src="./img/Banner Inicial 2.png" alt="Denim Jeans" style="width:100%">
+                    <h1>Estou sendo abusada?</h1>
+                    <b class="price">Vanessa89</b>
+                    <p>Olá a todos. Nesses meses passados, venho desconfiando de meu marido e de algumas de suas condutas. Somos casados há 6 anos e ele sempre foi alguém totalmente doce e respeitoso. Porém, desde que perdeu o emprego...</p>
+                    <a href="../publicacao/publicacao.php" target="_blank"><button>Clique aqui</button></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="botton-coment">
+        <a href="../publicacao/publicacao.php" target="_blank"><button>Para Mais Publicações</button></a>
+    </div>
+
+    <script src="modal-card.js"></script>
+
+
+    <br>
+    <br>
+    <br>
+
+    <!---------------------------------PUBLICTION----------------------------------->
+
+    <div class="title-recado">
+        <h2>
+            Recados
+        </h2>
+
+
+    </div>
+    </div>
+    <div class="conteiner-recado">
+        <a href="../tipos-violencia/tp-violencia.html" target="_blank"><img src="./img/pela-luta3.png" alt="recado"></a>
+        <div class="content-recado">
+            <h1 style="    font-size: 28px;">
+                Essa Luta tambem é nossa
+            </h1>
+            <b>
+            Instituto Brasileiro Trans de Educação (IBTE), somente em 2020 foram assassinadas 175 pessoas trans, o Brasil é o pais que mais persegue pessoas trans no mundo         </b>
+        </div>
+    </div>
+
+    <!---------------------------------FOOTER----------------------------------->
+
+
+    <br>
+
+    <br>
+
+
+    <footer>
+        <div class="footer-mobile">
+            <div class="footer-link">
+                <div class="list-footer">
+                    <a href="../sobre-nos/sobrenos.html" target="_blank">Sobre</a>
+                    <a href="../comentario/comentario.php" target="_blank">Comentar</a>
+                    <a href="../perfil/perfil.php" target="_blank">Meu Perfil</a>
+                    <a href="#" target="_blank">Configurações</a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>
